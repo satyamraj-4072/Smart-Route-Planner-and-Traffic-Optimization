@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Route Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="page">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div>
+
+                <h1>Smart Route Planner</h1>
+
+                <p>
+                    Traffic Optimization & Route Planning System
+                </p>
+
+            </div>
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                System Online
+
+            </div>
+
+        </header>
+
+
+
+        <!-- MAIN -->
+
+        <main class="main">
+
+
+            <!-- ROUTE PLANNER -->
+
+            <section class="planner-card">
+
+                <div class="section-title">
+
+                    <h2>Plan Your Route</h2>
+
+                    <p>
+                        Select your locations and routing algorithm
+                        to find the best route.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="source">
+                            Starting Location
+                        </label>
+
+                        <select id="source">
+
+                            <option value="A">
+                                Delhi
+                            </option>
+
+                            <option value="B">
+                                Ghaziabad
+                            </option>
+
+                            <option value="C">
+                                Noida
+                            </option>
+
+                            <option value="D">
+                                Meerut
+                            </option>
+
+                            <option value="E">
+                                Gurgaon
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="destination">
+                            Destination
+                        </label>
+
+                        <select id="destination">
+
+                            <option value="A">
+                                Delhi
+                            </option>
+
+                            <option value="B">
+                                Ghaziabad
+                            </option>
+
+                            <option value="C">
+                                Noida
+                            </option>
+
+                            <option value="D">
+                                Meerut
+                            </option>
+
+                            <option value="E">
+                                Gurgaon
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="algorithm">
+                            Routing Algorithm
+                        </label>
+
+                        <select id="algorithm">
+
+                            <option value="dijkstra">
+                                Dijkstra
+                            </option>
+
+                            <option value="astar">
+                                A* Algorithm
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <button id="routeButton">
+
+                    Find Best Route
+
+                </button>
+
+
+            </section>
+
+
+
+            <!-- RESULT -->
+
+            <section id="result"
+                     class="result-card">
+
+                <div class="empty-result">
+
+                    <div class="empty-icon">
+                        🚗
+                    </div>
+
+                    <h2>Route Result</h2>
+
+                    <p>
+                        Select a starting location and destination,
+                        then click "Find Best Route".
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            Smart Route Planner
+            <span>•</span>
+            Intelligent Traffic-Based Routing
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

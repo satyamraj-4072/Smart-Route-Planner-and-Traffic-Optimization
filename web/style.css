@@ -1,0 +1,936 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        #f1f5f9;
+
+    color:
+        #1e293b;
+}
+
+
+.page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.header {
+
+    background:
+        #0f172a;
+
+    color:
+        white;
+
+    padding:
+        25px 8%;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+}
+
+
+.header h1 {
+
+    margin: 0;
+
+    font-size:
+        30px;
+}
+
+
+.header p {
+
+    margin:
+        7px 0 0;
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        14px;
+}
+
+
+.status {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    font-size:
+        14px;
+
+    color:
+        #bbf7d0;
+}
+
+
+.status-dot {
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    background:
+        #22c55e;
+
+    border-radius:
+        50%;
+
+    display:
+        inline-block;
+}
+
+
+/* ==============================
+   MAIN
+   ============================== */
+
+.main {
+
+    width:
+        90%;
+
+    max-width:
+        1100px;
+
+    margin:
+        35px auto;
+
+    flex:
+        1;
+}
+
+
+/* ==============================
+   PLANNER CARD
+   ============================== */
+
+.planner-card {
+
+    background:
+        white;
+
+    padding:
+        30px;
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(15, 23, 42, 0.08);
+
+    border:
+        1px solid #e2e8f0;
+}
+
+
+.section-title h2 {
+
+    margin:
+        0;
+
+    font-size:
+        23px;
+}
+
+
+.section-title p {
+
+    margin:
+        7px 0 25px;
+
+    color:
+        #64748b;
+}
+
+
+.form-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        20px;
+}
+
+
+.form-group label {
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    font-weight:
+        bold;
+
+    font-size:
+        14px;
+}
+
+
+select {
+
+    width:
+        100%;
+
+    padding:
+        12px;
+
+    border:
+        1px solid #cbd5e1;
+
+    border-radius:
+        7px;
+
+    font-size:
+        15px;
+
+    background:
+        white;
+
+    color:
+        #1e293b;
+
+    cursor:
+        pointer;
+}
+
+
+select:focus {
+
+    outline:
+        none;
+
+    border-color:
+        #2563eb;
+}
+
+
+button {
+
+    width:
+        100%;
+
+    margin-top:
+        25px;
+
+    padding:
+        14px;
+
+    border:
+        none;
+
+    border-radius:
+        8px;
+
+    background:
+        #2563eb;
+
+    color:
+        white;
+
+    font-size:
+        16px;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+}
+
+
+button:hover {
+
+    background:
+        #1d4ed8;
+}
+
+
+/* ==============================
+   RESULT CARD
+   ============================== */
+
+.result-card {
+
+    margin-top:
+        25px;
+
+    background:
+        white;
+
+    padding:
+        30px;
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(15, 23, 42, 0.08);
+
+    border:
+        1px solid #e2e8f0;
+}
+
+
+.empty-result {
+
+    text-align:
+        center;
+
+    padding:
+        20px;
+}
+
+
+.empty-icon {
+
+    font-size:
+        42px;
+
+    margin-bottom:
+        10px;
+}
+
+
+.empty-result h2 {
+
+    margin:
+        5px 0;
+
+}
+
+
+.empty-result p {
+
+    color:
+        #64748b;
+}
+
+
+/* ==============================
+   RESULT HEADER
+   ============================== */
+
+.result-header {
+
+    margin-bottom:
+        20px;
+}
+
+
+.result-header h2 {
+
+    margin:
+        0;
+
+    font-size:
+        22px;
+}
+
+
+.success {
+
+    color:
+        #16a34a;
+
+    font-size:
+        14px;
+
+    margin-top:
+        5px;
+}
+
+
+/* ==============================
+   OPTIMAL ROUTE
+   ============================== */
+
+.route-box {
+
+    background:
+        #eff6ff;
+
+    border:
+        1px solid #bfdbfe;
+
+    border-radius:
+        10px;
+
+    padding:
+        20px;
+
+    margin-bottom:
+        20px;
+}
+
+
+.route-box h3 {
+
+    margin:
+        0 0 12px;
+
+    font-size:
+        17px;
+}
+
+
+.route-path {
+
+    font-size:
+        20px;
+
+    font-weight:
+        bold;
+
+    color:
+        #1d4ed8;
+
+    margin-bottom:
+        18px;
+}
+
+
+.metrics {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        12px;
+}
+
+
+.metric {
+
+    background:
+        white;
+
+    padding:
+        14px;
+
+    border-radius:
+        8px;
+
+    border:
+        1px solid #dbeafe;
+}
+
+
+.metric-label {
+
+    font-size:
+        12px;
+
+    color:
+        #64748b;
+
+    margin-bottom:
+        5px;
+}
+
+
+.metric-value {
+
+    font-size:
+        18px;
+
+    font-weight:
+        bold;
+}
+
+
+/* ==============================
+   ALTERNATIVE ROUTE
+   ============================== */
+
+.alternative-box {
+
+    background:
+        #f8fafc;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius:
+        10px;
+
+    padding:
+        20px;
+
+    margin-bottom:
+        20px;
+}
+
+
+.alternative-box h3 {
+
+    margin:
+        0 0 10px;
+
+}
+
+
+.alternative-route {
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        8px;
+
+    color:
+        #334155;
+}
+
+
+.time-saved {
+
+    background:
+        #ecfdf5;
+
+    border:
+        1px solid #bbf7d0;
+
+    color:
+        #166534;
+
+    padding:
+        15px;
+
+    border-radius:
+        8px;
+
+    margin-bottom:
+        25px;
+}
+
+
+/* ==============================
+   TRAFFIC
+   ============================== */
+
+.traffic-section h3 {
+
+    margin-bottom:
+        8px;
+}
+
+
+.traffic-section > p {
+
+    color:
+        #64748b;
+
+    margin-top:
+        0;
+
+    margin-bottom:
+        15px;
+}
+
+
+.traffic-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        12px;
+}
+
+
+.traffic-card {
+
+    padding:
+        15px;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius:
+        8px;
+
+    background:
+        #f8fafc;
+}
+
+
+.traffic-road {
+
+    font-weight:
+        bold;
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        7px;
+}
+
+
+.traffic-info {
+
+    font-size:
+        13px;
+
+    color:
+        #64748b;
+}
+
+
+.low {
+
+    border-left:
+        5px solid #22c55e;
+}
+
+
+.medium {
+
+    border-left:
+        5px solid #eab308;
+}
+
+
+.high {
+
+    border-left:
+        5px solid #f97316;
+}
+
+
+.severe {
+
+    border-left:
+        5px solid #ef4444;
+}
+
+
+/* ==============================
+   ALGORITHM COMPARISON
+   ============================== */
+
+.comparison-section {
+
+    margin-top:
+        25px;
+}
+
+
+.compare-button {
+
+    background:
+        #0f172a;
+}
+
+
+.compare-button:hover {
+
+    background:
+        #1e293b;
+}
+
+
+.compare-button:disabled {
+
+    opacity:
+        0.6;
+
+    cursor:
+        not-allowed;
+}
+
+
+/* ==============================
+   COMPARISON BOX
+   ============================== */
+
+.comparison-box {
+
+    margin-top:
+        25px;
+
+    padding:
+        25px;
+
+    background:
+        #f8fafc;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius:
+        10px;
+}
+
+
+.comparison-box h2 {
+
+    margin-top:
+        0;
+}
+
+
+.comparison-box > p {
+
+    color:
+        #64748b;
+}
+
+
+.comparison-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        15px;
+
+    margin-top:
+        20px;
+}
+
+
+.comparison-card {
+
+    background:
+        white;
+
+    padding:
+        20px;
+
+    border-radius:
+        8px;
+
+    border:
+        1px solid #e2e8f0;
+}
+
+
+.comparison-card h3 {
+
+    margin-top:
+        0;
+
+    margin-bottom:
+        15px;
+}
+
+
+.comparison-route {
+
+    font-weight:
+        bold;
+
+    color:
+        #2563eb;
+
+    line-height:
+        1.5;
+}
+
+
+.comparison-card p {
+
+    color:
+        #475569;
+}
+
+
+.comparison-card strong {
+
+    color:
+        #1e293b;
+}
+
+
+.comparison-result {
+
+    margin-top:
+        20px;
+
+    padding:
+        15px;
+
+    background:
+        #ecfdf5;
+
+    border:
+        1px solid #bbf7d0;
+
+    border-radius:
+        8px;
+
+    color:
+        #166534;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+
+    text-align:
+        center;
+
+    padding:
+        20px;
+
+    color:
+        #64748b;
+
+    font-size:
+        13px;
+}
+
+
+footer span {
+
+    margin:
+        0 8px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 800px) {
+
+    .header {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            15px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .metrics {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .traffic-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .comparison-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .header {
+
+        padding:
+            20px;
+    }
+
+
+    .main {
+
+        width:
+            94%;
+
+        margin:
+            20px auto;
+    }
+
+
+    .planner-card,
+    .result-card {
+
+        padding:
+            20px;
+    }
+
+
+    .header h1 {
+
+        font-size:
+            24px;
+    }
+
+
+    .route-path {
+
+        font-size:
+            17px;
+    }
+
+}
